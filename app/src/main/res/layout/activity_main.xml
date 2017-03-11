@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="armando.example.com.calculadora.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/valor"
+        android:clickable="false"
+        android:textSize="60dp"
+        android:editable="false"
+        android:lines="2"
+        android:textAlignment="textEnd"
+        android:gravity="bottom"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/table_margin">
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:textAlignment="center"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/erase"
+                android:text="@string/erase"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/clear"
+                android:text="@string/clear"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/horizontal_button_margin"
+                android:id="@+id/potencia"
+                android:text="@string/potencia"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/suma"
+                android:text="@string/suma"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n7"
+                android:text="@string/n7"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n8"
+                android:text="@string/n8"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n9"
+                android:text="@string/n9"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/horizontal_button_margin"
+                android:id="@+id/resta"
+                android:text="@string/resta"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="@dimen/height_button"
+            android:layout_width="match_parent"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n4"
+                android:text="@string/n4"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n5"
+                android:text="@string/n5"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n6"
+                android:text="@string/n6"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/multi"
+                android:text="@string/multi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="@dimen/height_button"
+            android:layout_width="match_parent"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/horizontal_button_margin"
+                android:id="@+id/n1"
+                android:text="@string/n1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/n2"
+                android:text="@string/n2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/n3"
+                android:text="@string/n3"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/horizontal_button_margin"
+                android:id="@+id/div"
+                android:text="@string/div"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="@dimen/height_button"
+            android:layout_width="match_parent"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/n0"
+                android:text="@string/n0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/punto"
+                android:text="@string/punto"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/equal"
+                android:text="@string/equal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/horizontal_button_margin"
+                android:id="@+id/porcentaje"
+                android:text="@string/porcentaje"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                style="@android:style/Widget.Material.Light.Button.Inset" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

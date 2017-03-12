@@ -72,17 +72,31 @@ public class MainActivity extends Activity implements View.OnClickListener{
                     }
                     break;
                 case R.id.erase: c.clear(); break;
-                case R.id.clear: c.clearAll(); break;
-                case R.id.suma:
-                    c.write("+");
-                    c.suma();
+                case R.id.clear:
+                    c.clearAll();
+                    c.restart();
                     break;
-                case R.id.resta: break;
-                case R.id.multi: break;
-                case R.id.div: break;
+                case R.id.suma:
+                    c.process(edit.getText().toString());
+                    c.write("+");
+                    break;
+                case R.id.resta:
+                    c.process(edit.getText().toString());
+                    c.write("-");
+                    break;
+                case R.id.multi:
+                    c.process(edit.getText().toString());
+                    c.write("x");
+                    break;
+                case R.id.div:
+                    c.process(edit.getText().toString());
+                    c.write("/");
+                    break;
                 case R.id.potencia: break;
                 case R.id.porcentaje: break;
-                case R.id.equal: break;
+                case R.id.equal:
+                    c.showRes();
+                    break;
             }
         } else {
             Toast.makeText(this, R.string.fill, Toast.LENGTH_SHORT).show();

@@ -18,16 +18,6 @@ public class Calculadora{
         this.acum = 0;
     }
 
-    public boolean searchPoint () {
-        String text = getText().toString();
-        for (int i = 0; i < text.length(); i ++) {
-            if(text.charAt(i) == '.') {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void write (String text) {
         if((isEmpty() && !text.equals("."))) {
             edit.setText("");
@@ -47,6 +37,16 @@ public class Calculadora{
         edit.setText("0");
     }
 
+    public boolean searchPoint () {
+        String text = getText().toString();
+        for (int i = 0; i < text.length(); i ++) {
+            if(text.charAt(i) == '.') {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public boolean isFill () {
         byte point;
         if (searchPoint()) point = 1; else point = 0;
@@ -57,7 +57,7 @@ public class Calculadora{
         }
     }
 
-    public boolean isEmpty () {
+    private boolean isEmpty () {
         if (getText().toString().isEmpty() || getText().toString().equals("0")) {
             return true;
         } else {
@@ -65,11 +65,46 @@ public class Calculadora{
         }
     }
 
-    public Editable getText() {
+    private Editable getText() {
         return edit.getText();
     }
 
-    public void suma () {
 
+    public void process(String input) {
+        try {
+            acum = Double.parseDouble(input);
+        } catch (Exception e) {
+            for (int i = input.length() - 1; i > 0; i--) {
+                if (input.charAt(i) == '+') {
+                    acum += Double.parseDouble(input.substring(i + 1));
+                    break;
+                }
+                if (input.charAt(i) == '-') {
+                    acum -= Double.parseDouble(input.substring(i + 1));
+                    break;
+                }
+                if (input.charAt(i) == 'x') {
+                    acum *= Double.parseDouble(input.substring(i + 1));
+                    break;
+                }
+                if (input.charAt(i) == '/') {
+                    acum /= Double.parseDouble(input.substring(i + 1));
+                    break;
+                }
+            }
+        }
+    }
+
+    public void showRes() {
+        String input = getText().toString();
+        try {
+            Double.parseDouble(input.substring(input.length() - 1));
+            process(getText().toString());
+        } catch (Exception e) {}
+        edit.setText(""+ acum);
+    }
+
+    public void restart() {
+        acum = 0;
     }
 }
